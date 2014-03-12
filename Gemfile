@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
 
-gem 'pg', '>=0.15.1'
-
 group :development, :test do
   gem 'rspec-rails','>=2.13.1'
 end
@@ -13,6 +11,7 @@ group :test do
 end
 
 group :production do
+  gem 'pg','>=0.15.1'
   gem 'rails_12factor', '>=0.0.2'
 end
 
@@ -20,7 +19,7 @@ end
 gem 'rails', '4.0.3'
 
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
+gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
